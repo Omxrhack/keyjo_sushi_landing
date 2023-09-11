@@ -1,0 +1,103 @@
+---
+---
+
+<div class="flex justify-center z-10">
+  <div>
+    <button id="abrir-menu"
+      ><img class="w-[62px]" src="../img/btn-menu.png" alt="btn-menu" /></button
+    >
+  </div>
+  <nav id="nav" class="items-center">
+    <ul class="flex gap-24 justify-center">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/menu">Menú</a></li>
+      <li><a href="/visitanos">Visitanos</a></li>
+      <li><a href="/contacto">Contáctanos</a></li>
+    </ul>
+  </nav>
+</div>
+
+<style>
+  nav {
+    color: black;
+    padding: 30px;
+    position: fixed;
+    flex-flow: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: white;
+  }
+
+  #abrir-menu {
+    display: none;
+  }
+  a {
+    font-size: 1rem;
+    font-family: monospace;
+    color: black;
+  }
+
+  a:hover {
+    border-bottom: 2px solid red;
+    transition: linear 0.14s;
+  }
+  @media (max-width: 650px) {
+    #abrir-menu {
+      display: flex;
+      position: fixed;
+      padding: 10px;
+      border-radius: 10px;
+      background: transparent;
+      backdrop-filter: blur(5px);
+      z-index: 1;
+      right: 0;
+    }
+    #nav {
+      opacity: 0;
+      visibility: hidden;
+
+      margin-top: 0;
+      display: grid;
+      justify-content: space-evenly;
+      gap: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: black;
+      padding: 2rem;
+      box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
+    }
+    #navvisible {
+      opacity: 1;
+      visibility: visible;
+      margin-top: 0;
+      display: grid;
+      justify-content: space-evenly;
+      gap: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: black;
+      padding: 2rem;
+      box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
+    }
+    a {
+      display: block;
+    }
+    a:hover {
+      color: red !important;
+      border-bottom: transparent;
+    }
+    ul {
+      display: grid;
+      justify-items: center;
+    }
+    li {
+      display: block;
+    }
+  }
+</style>
