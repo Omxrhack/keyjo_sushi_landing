@@ -1,19 +1,25 @@
 ---
+import Carrusell from "../components/Carrusell.astro";
 import Opinion from "../components/Opinion.astro";
-
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="KEYJO - ROLL SUSHI">
   <section id="sec-prin" class="w-full h-full grid items-center justify-center">
     <div class="">
-      <h1 class="text-7xl text-white font-extrabold text-center">
+      <h1
+        class="text-7xl text-white font-extrabold text-center animate-fade animate-once animate-duration-1000 animate-ease-in"
+      >
         KEYJO - ROLL SUSHI
       </h1>
-      <p class="text-white text-center font-semibold">
+      <p
+        class="text-white text-center font-semibold animate-fade animate-once animate-duration-1000 animate-ease-in animate-delay-[400ms]"
+      >
         ¿Se te antoja un sushi?
       </p>
-      <div class="flex justify-evenly mt-[40px]">
+      <div
+        class="flex justify-evenly mt-[40px] animate-fade animate-once animate-duration-1000 animate-ease-in animate-delay-[600ms]"
+      >
         <div class="">
           <a
             class="py-1 px-4"
@@ -31,9 +37,11 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
-  <section class="w-full h-full mt-[5rem]">
+  <section class="mt-[5rem]">
     <div class="grid justify-center">
-      <h3 class="text-center text-5xl font-extrabold">Somos los mejores</h3>
+      <h3 class="text-center text-5xl font-extrabold mb-2">
+        Somos los mejores
+      </h3>
       <p class="text-center font-semibold">
         ¿Tienes dudas?, solo mira una de las opiniones de nuestros clientes
       </p>
@@ -71,9 +79,10 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
-  <section class="w-full h-full"></section>
+  <section class="grid">
+    <Carrusell />
+  </section>
 </Layout>
-
 <style>
   #sec-prin {
     background-image: url("../img/bg-section-prin.jpg");

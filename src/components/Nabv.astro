@@ -1,7 +1,7 @@
 ---
 ---
 
-<div class="flex justify-center z-10">
+<div class="flex justify-center z-99">
   <div>
     <button id="abrir-menu"
       ><img class="w-[62px]" src="../img/btn-menu.png" alt="btn-menu" /></button
@@ -25,8 +25,8 @@
     flex-flow: column;
     top: 0;
     left: 0;
+    z-index: 1;
     right: 0;
-    z-index: 99;
     background-color: white;
   }
 
@@ -57,18 +57,6 @@
     #nav {
       opacity: 0;
       visibility: hidden;
-
-      margin-top: 0;
-      display: grid;
-      justify-content: space-evenly;
-      gap: 1rem;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background-color: black;
-      padding: 2rem;
-      box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
     }
     #navvisible {
       opacity: 1;
@@ -81,7 +69,7 @@
       top: 0;
       right: 0;
       bottom: 0;
-      background-color: black;
+
       padding: 2rem;
       box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
     }

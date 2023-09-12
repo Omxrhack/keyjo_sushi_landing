@@ -1,0 +1,54 @@
+---
+import Estadisticas from "./Estadisticas.astro";
+---
+
+<div class="text-center">
+  <Estadisticas />
+  <h1 class="text-5xl font-extrabold">¿Se te antoja uno?</h1>
+  <p class="font-semibold">Visitanos en nuestra sucursal</p>
+</div>
+<div
+  id="contenedor"
+  class="carousel carousel-end rounded-box w-500 flex p-3 mt-10"
+>
+  <div class="carousel-item p-8">
+    <img
+      class="w-[90rem]"
+      src="https://scontent.fcul2-1.fna.fbcdn.net/v/t39.30808-6/367458093_200639656337498_370840063056216077_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeGD3o_1H3gEFIjwqVOihh585yaivh0BVDfnJqK-HQFUN00JTCsOPuGOWplVIMoCH1DRYvInMbpDIAxwIRg4N7iB&_nc_ohc=vwUKevfzvMsAX9ov4B2&_nc_ht=scontent.fcul2-1.fna&oh=00_AfD8UJNSin4dok6Tb6W_1nFahojfAAgp7pZ1VhOTmAt8RA&oe=6503C70D"
+      alt="Drink"
+    />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="https://scontent.fcul2-1.fna.fbcdn.net/v/t39.30808-6/366320288_194704563597674_1238113714654730361_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeGdruwAbovyXk68hCbTs9o-UsLNYBVIAMBSws1gFUgAwNodZ-iSZUlgSqds8KeMqgN-5N4VUhMU1zrDDd_Wl4-a&_nc_ohc=0E4kMitoLekAX9JSuHq&_nc_ht=scontent.fcul2-1.fna&oh=00_AfAeggjiu78k4kYi2nVzPPQ6uCtqla8SSzspcRI2gJJD6A&oe=6504E474"
+      alt="Drink"
+    />
+  </div>
+  <div id="container-img" class="carousel-item p-8">
+    <img
+      class="w-[85rem]"
+      src="https://scontent.fcul2-1.fna.fbcdn.net/v/t39.30808-6/366210992_194076126993851_7513283628027227678_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeFNfT6_ip9qxhF94MVc5WH1D4SNQ4Y7t7wPhI1Dhju3vCkB4tHFw1DkpcWwL3IZxgloJRwc4v3rAq1JooFVwjx6&_nc_ohc=Wo0vUfJ3fkMAX_aDmp0&_nc_oc=AQmmLxYVE28AAo0GDYxHundm-SxfLGktHS32lxAf5VG6lvAQCY3zKW414V4Unhk0tKc&_nc_ht=scontent.fcul2-1.fna&oh=00_AfCIazwlgsM1Q3PIhgmZIEDWWNjHgMENaVIyMCJAd-NAGA&oe=6504E22F"
+      alt="Drink"
+    />
+  </div>
+</div>
+
+<style>
+  img:hover {
+    cursor: pointer;
+    filter: blur(5px);
+    -webkit-transform: scale(1.3);
+    transform: scale(1);
+    transition: all 0.6s;
+  }
+
+  @media (max-width: 650px) {
+    #contenedor {
+      display: grid;
+      justify-content: center;
+    }
+    img {
+      width: 20rem;
+    }
+  }
+</style>
