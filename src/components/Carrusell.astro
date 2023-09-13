@@ -5,7 +5,7 @@ import Estadisticas from "./Estadisticas.astro";
 <div class="text-center">
   <Estadisticas />
   <h1 class="text-5xl font-extrabold">¿Se te antoja uno?</h1>
-  <p class="font-semibold">Visitanos en nuestra sucursal</p>
+  <p>Visitanos en nuestra sucursal</p>
 </div>
 <div
   id="contenedor"
@@ -19,10 +19,12 @@ import Estadisticas from "./Estadisticas.astro";
     />
   </div>
   <div class="carousel-item">
-    <img
-      src="https://scontent.fcul2-1.fna.fbcdn.net/v/t39.30808-6/366320288_194704563597674_1238113714654730361_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeGdruwAbovyXk68hCbTs9o-UsLNYBVIAMBSws1gFUgAwNodZ-iSZUlgSqds8KeMqgN-5N4VUhMU1zrDDd_Wl4-a&_nc_ohc=0E4kMitoLekAX9JSuHq&_nc_ht=scontent.fcul2-1.fna&oh=00_AfAeggjiu78k4kYi2nVzPPQ6uCtqla8SSzspcRI2gJJD6A&oe=6504E474"
-      alt="Drink"
-    />
+    <div>
+      <img
+        src="https://scontent.fcul2-1.fna.fbcdn.net/v/t39.30808-6/366320288_194704563597674_1238113714654730361_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeGdruwAbovyXk68hCbTs9o-UsLNYBVIAMBSws1gFUgAwNodZ-iSZUlgSqds8KeMqgN-5N4VUhMU1zrDDd_Wl4-a&_nc_ohc=0E4kMitoLekAX9JSuHq&_nc_ht=scontent.fcul2-1.fna&oh=00_AfAeggjiu78k4kYi2nVzPPQ6uCtqla8SSzspcRI2gJJD6A&oe=6504E474"
+        alt="Drink"
+      />
+    </div>
   </div>
   <div id="container-img" class="carousel-item p-8">
     <img
@@ -41,7 +43,6 @@ import Estadisticas from "./Estadisticas.astro";
     transform: scale(1);
     transition: all 0.6s;
   }
-
   @media (max-width: 650px) {
     #contenedor {
       display: grid;
@@ -49,6 +50,9 @@ import Estadisticas from "./Estadisticas.astro";
     }
     img {
       width: 20rem;
+    }
+    h1 {
+      font-size: 3rem;
     }
   }
 </style>

@@ -10,18 +10,19 @@ import FooterPer from "../components/FooterPer.astro";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="icon"
       type="image/svg+xml"
       href="../img/logo_mini_keyroll_mejor.jpg"
     />
     <meta name="generator" content={Astro.generator} />
+    <script src="../js/menu.js"></script>
     <title>{title}</title>
     <ViewTransitions />
   </head>
@@ -32,6 +33,7 @@ import FooterPer from "../components/FooterPer.astro";
     <style is:global>
       html {
         color-scheme: light;
+        background-color: white;
       }
       code {
         font-family: Menlo, Monaco, Lucida Console, Liberation Mono,

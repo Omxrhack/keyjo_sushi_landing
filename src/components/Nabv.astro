@@ -7,14 +7,20 @@
       ><img class="w-[62px]" src="../img/btn-menu.png" alt="btn-menu" /></button
     >
   </div>
-  <nav id="nav" class="items-center">
+  <nav id="nav" class="nav items-center">
     <ul class="flex gap-24 justify-center">
       <li><a href="/">Inicio</a></li>
       <li><a href="/menu">Menú</a></li>
       <li><a href="/visitanos">Visitanos</a></li>
       <li><a href="/contacto">Contáctanos</a></li>
+      <li class="hidden">
+        <a id="cerrar-menu"
+          ><img src="../img/btn-menu.png" alt="cerrar-menu" /></a
+        >
+      </li>
     </ul>
   </nav>
+  <script is:inline src="../js/menu.js"></script>
 </div>
 
 <style>
@@ -27,7 +33,7 @@
     left: 0;
     z-index: 1;
     right: 0;
-    background-color: white;
+    background-color: brown;
   }
 
   #abrir-menu {
@@ -36,48 +42,67 @@
   a {
     font-size: 1rem;
     font-family: monospace;
-    color: black;
+    color: white;
   }
 
   a:hover {
-    border-bottom: 2px solid red;
-    transition: linear 0.14s;
+    border-bottom: 2px solid white;
+    transition: linear all 0.15s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @media (max-width: 650px) {
+    nav {
+      opacity: 0;
+      visibility: hidden;
+    }
+    #navvv {
+      opacity: 1;
+      visibility: visible;
+
+      display: grid;
+      background-color: brown;
+
+      bottom: 0;
+      animation: fadeIn 0.8s;
+      overflow: hidden;
+    }
     #abrir-menu {
       display: flex;
       position: fixed;
       padding: 10px;
-      border-radius: 10px;
-      background: transparent;
-      backdrop-filter: blur(5px);
+      border-top-left-radius: 40px;
+      border-bottom-left-radius: 40px;
+      background-color: brown;
       z-index: 1;
       right: 0;
     }
-    #nav {
-      opacity: 0;
-      visibility: hidden;
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
-    #navvisible {
-      opacity: 1;
-      visibility: visible;
-      margin-top: 0;
-      display: grid;
-      justify-content: space-evenly;
-      gap: 1rem;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
+    #cerrar-menu {
+      width: 60px;
+      display: block;
+      cursor: pointer;
+    }
 
-      padding: 2rem;
-      box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
-    }
     a {
+      color: white;
       display: block;
     }
     a:hover {
-      color: red !important;
+      color: grey !important;
       border-bottom: transparent;
     }
     ul {

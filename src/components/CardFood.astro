@@ -1,0 +1,32 @@
+---
+interface Props {
+  src: string;
+  p: string;
+  h5: string;
+  pr: string;
+}
+const { src, p, h5, pr } = Astro.props;
+---
+
+<div class="max-w-sm bg-white border-[2px] border-red-800 rounded-lg shadow">
+  <a>
+    <img
+      class="rounded-t-lg w-[400px] h-[300px] object-cover"
+      src={src}
+      alt=""
+    />
+  </a>
+  <div class="p-5">
+    <a href="#">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-black">
+        {h5}
+      </h5>
+    </a>
+    <p class="mb-3 font-normal text-gray-800">
+      {p}
+    </p>
+    <p class="text-center text-black font-mono font-semibold">
+      {pr}
+    </p>
+  </div>
+</div>
