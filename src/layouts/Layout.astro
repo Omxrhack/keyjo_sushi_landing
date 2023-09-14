@@ -1,9 +1,10 @@
 ---
 interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 import { ViewTransitions } from "astro:transitions";
 import Nabv from "../components/Nabv.astro";
 import FooterPer from "../components/FooterPer.astro";
@@ -13,8 +14,9 @@ import FooterPer from "../components/FooterPer.astro";
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="icon"
@@ -22,7 +24,7 @@ import FooterPer from "../components/FooterPer.astro";
       href="../img/logo_mini_keyroll_mejor.jpg"
     />
     <meta name="generator" content={Astro.generator} />
-    <script src="../js/menu.js"></script>
+
     <title>{title}</title>
     <ViewTransitions />
   </head>
@@ -34,6 +36,7 @@ import FooterPer from "../components/FooterPer.astro";
       html {
         color-scheme: light;
         background-color: white;
+        scroll-behavior: smooth;
       }
       code {
         font-family: Menlo, Monaco, Lucida Console, Liberation Mono,

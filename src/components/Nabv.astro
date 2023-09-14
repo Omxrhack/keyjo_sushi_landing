@@ -1,7 +1,7 @@
 ---
 ---
 
-<div class="flex justify-center z-99">
+<div id="content-nab" class="flex justify-center z-99" transition:persist>
   <div>
     <button id="abrir-menu"
       ><img class="w-[62px]" src="../img/btn-menu.png" alt="btn-menu" /></button
@@ -9,10 +9,10 @@
   </div>
   <nav id="nav" class="nav items-center">
     <ul class="flex gap-24 justify-center">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/menu">Menú</a></li>
-      <li><a href="/visitanos">Visitanos</a></li>
-      <li><a href="/contacto">Contáctanos</a></li>
+      <li><a id="a" href="/">Inicio</a></li>
+      <li><a id="a" href="/menu">Menú</a></li>
+      <li><a id="a" href="/visitanos">Visitanos</a></li>
+      <li><a id="a" href="/nosotros">Nosotros</a></li>
       <li class="hidden">
         <a id="cerrar-menu"
           ><img src="../img/btn-menu.png" alt="cerrar-menu" /></a
@@ -20,14 +20,15 @@
       </li>
     </ul>
   </nav>
-  <script is:inline src="../js/menu.js"></script>
+  <script src="../js/menudesple.js"></script>
 </div>
 
 <style>
   nav {
     color: black;
     padding: 30px;
-    position: fixed;
+    position: inherit;
+    width: -webkit-fill-available;
     flex-flow: column;
     top: 0;
     left: 0;
@@ -61,14 +62,14 @@
     nav {
       opacity: 0;
       visibility: hidden;
+      position: absolute;
     }
-    #navvv {
+    .navvv {
       opacity: 1;
       visibility: visible;
-
       display: grid;
       background-color: brown;
-
+      position: fixed;
       bottom: 0;
       animation: fadeIn 0.8s;
       overflow: hidden;
@@ -83,6 +84,7 @@
       z-index: 1;
       right: 0;
     }
+
     @keyframes fadeIn {
       0% {
         opacity: 0;

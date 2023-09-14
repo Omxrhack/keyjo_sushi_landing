@@ -4,11 +4,15 @@ interface Props {
   p: string;
   h5: string;
   pr: string;
+  id: string;
 }
-const { src, p, h5, pr } = Astro.props;
+const { src, p, h5, pr, id } = Astro.props;
 ---
 
-<div class="max-w-sm bg-white border-[2px] border-red-800 rounded-lg shadow">
+<div
+  id={id}
+  class="max-w-xs bg-white border-[2px] border-red-800 rounded-lg shadow"
+>
   <a>
     <img
       class="rounded-t-lg w-[400px] h-[300px] object-cover"
@@ -25,8 +29,8 @@ const { src, p, h5, pr } = Astro.props;
     <p class="mb-3 font-normal text-gray-800">
       {p}
     </p>
-    <p class="text-center text-black font-mono font-semibold">
-      {pr}
+    <p class="flex text-center text-black font-mono font-semibold">
+      Precio<span class="text-red-800 font-extrabold mx-2"> ${pr}</span>
     </p>
   </div>
 </div>
